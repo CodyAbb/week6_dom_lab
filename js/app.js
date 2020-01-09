@@ -28,4 +28,6 @@ const handleSubmitForm = function (event) {
   readingList.appendChild(liAuthor);
   readingList.appendChild(liCategory);
 
+  const submitForm = document.querySelector('#new-item-form');
+  submitForm.reset();
 }
