@@ -20,16 +20,24 @@ const handleSubmitForm = function (event) {
 
   const liTitle = document.createElement('li');
   liTitle.textContent = `Title: ${title}`;
+  liTitle.classList.add("readingItemDetails");
 
   const liAuthor = document.createElement('li');
   liAuthor.textContent = `Author: ${author}`;
+  liAuthor.classList.add("readingItemDetails");
 
   const liCategory = document.createElement('li');
   liCategory.textContent = `Category: ${category}`;
+  liCategory.classList.add("readingItemDetails");
 
-  readingList.appendChild(liTitle);
-  readingList.appendChild(liAuthor);
-  readingList.appendChild(liCategory);
+  const liReadingItems = document.createElement('li');
+  liReadingItems.classList.add("readingItem");
+
+  liReadingItems.appendChild(liTitle);
+  liReadingItems.appendChild(liAuthor);
+  liReadingItems.appendChild(liCategory);
+
+  readingList.appendChild(liReadingItems);
 
   const submitForm = document.querySelector('#new-item-form');
   submitForm.reset();
